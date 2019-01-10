@@ -1,6 +1,6 @@
 # seed
-Seed Maven Project for S3 Image upload.
+Metamug Plugin Example
 
-Uses [Metamug Code API](https://github.com/metamug/mtg-api) as dependency
+Uses [Metamug Code API](https://github.com/metamug/mtg-api) as dependency.
 
-For more on [Metamug Plugins](https://metamug.com/docs/plugins)
+Check the docs [here](https://metamug.com/docs/plugins).
