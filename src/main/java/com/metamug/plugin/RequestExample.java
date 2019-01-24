@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.metamug.seed;
+package com.metamug.plugin;
 
 import com.metamug.exec.RequestProcessable;
-import com.metamug.seed.entity.Customer;
+import com.metamug.plugin.entity.Customer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
