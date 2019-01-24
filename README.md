@@ -1,5 +1,4 @@
-# seed
-Metamug Plugin Example
+### Metamug Plugin Example
 
 Uses [Metamug Code API](https://github.com/metamug/mtg-api) as dependency.
 
