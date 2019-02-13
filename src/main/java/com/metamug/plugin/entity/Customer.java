@@ -15,13 +15,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class Customer {
-
+    private int id;
     private String name;
     @XmlElement(name = "contact")
     private Contact contact;
 
     public void setName(String n) {
         name = n;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setContact(String phone, String email) {
@@ -30,6 +34,10 @@ public class Customer {
         contact.setPhone(phone);
     }
 
+    public int getId() {
+        return id;
+    }
+    
     public String getName() {
         return name;
     }
