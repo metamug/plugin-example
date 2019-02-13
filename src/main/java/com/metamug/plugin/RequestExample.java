@@ -18,6 +18,12 @@ public class RequestExample implements RequestProcessable {
     @Override
     public Object process(Map<String, String> params, DataSource ds, Map<String, String> requestHeaders) {
 
+        params.entrySet().forEach(entry -> {
+            System.out.println();
+            System.out.println("Name: "+entry.getKey());
+            System.out.println("Value: "+entry.getValue());
+        });
+        
         Customer customer = new Customer();
         customer.setName("John");
         customer.setId(1);
