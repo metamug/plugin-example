@@ -5,6 +5,8 @@
  */
 package com.metamug.plugin;
 
+import com.metamug.entity.Request;
+import com.metamug.entity.Response;
 import com.metamug.exec.RequestProcessable;
 import com.metamug.plugin.entity.Customer;
 import java.util.Map;
@@ -15,20 +17,15 @@ import javax.sql.DataSource;
  * @author anishhirlekar
  */
 public class RequestExample implements RequestProcessable {
-    @Override
-    public Object process(Map<String, String> params, DataSource ds, Map<String, String> requestHeaders) {
 
-        params.entrySet().forEach(entry -> {
-            System.out.println();
-            System.out.println("Name: "+entry.getKey());
-            System.out.println("Value: "+entry.getValue());
-        });
-        
+    @Override
+    public Response process(Request request, DataSource ds, Map<String, Object> bus, Map<String, String> args) throws Exception {
         Customer customer = new Customer();
         customer.setName("John");
         customer.setId(1);
         customer.setContact("8080808080", "john@example.com");
 
-        return customer;
+        Response resp = new Response(customer);
+        return resp;
     }
 }

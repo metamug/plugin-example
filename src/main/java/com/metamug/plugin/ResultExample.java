@@ -5,6 +5,7 @@
  */
 package com.metamug.plugin;
 
+import com.metamug.entity.Response;
 import com.metamug.exec.ResultProcessable;
 import com.metamug.plugin.entity.Customer;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.SortedMap;
  */
 public class ResultExample implements ResultProcessable {
     @Override
-    public Object process(SortedMap[] results, String[] columnNames, int rowCount) {
+    public Response process(SortedMap[] results, String[] columnNames, int rowCount) {
         List<Customer> customers = new ArrayList<>();
         for(SortedMap row: results) {
             Customer customer = new Customer();
@@ -25,6 +26,7 @@ public class ResultExample implements ResultProcessable {
             customer.setContact("8080808080","ex@ample.com");
             customers.add(customer);
         }
-        return customers;
+        Response resp = new Response(customers);
+        return resp;
     }    
 }
