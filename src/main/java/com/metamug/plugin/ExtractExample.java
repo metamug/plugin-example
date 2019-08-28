@@ -21,7 +21,7 @@ public class ExtractExample implements RequestProcessable {
     public Response process(Request request, DataSource ds, Map<String, Object> bus, Map<String, String> args) throws Exception {
         String value = args.get("foo1");
         
-        Response r = new Response("foo1");
+        Response r = new Response(value);
         return r;
     }
 }
