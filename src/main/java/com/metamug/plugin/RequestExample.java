@@ -19,13 +19,12 @@ import javax.sql.DataSource;
 public class RequestExample implements RequestProcessable {
 
     @Override
-    public Response process(Request request, DataSource ds, Map<String, Object> bus, Map<String, String> args) throws Exception {
+    public Response process(Request request, DataSource ds, Map<String, Object> args) throws Exception {
         Customer customer = new Customer();
         customer.setName("John");
         customer.setId(1);
         customer.setContact("8080808080", "john@example.com");
 
         Response resp = new Response(customer);
-        return resp;
-    }
+        return resp;}
 }
