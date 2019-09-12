@@ -6,10 +6,12 @@
 package com.metamug.plugin;
 
 import com.metamug.entity.Response;
+import com.metamug.entity.Result;
 import com.metamug.exec.ResultProcessable;
 import com.metamug.plugin.entity.Customer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.SortedMap;
 
 /**
@@ -17,16 +19,20 @@ import java.util.SortedMap;
  * @author anishhirlekar
  */
 public class ResultExample implements ResultProcessable {
+
     @Override
-    public Response process(SortedMap[] results, String[] columnNames, int rowCount) {
+    public Response process(Result queryResult) throws Exception {
+        Map[] results = queryResult.getRecordMap();
+        
         List<Customer> customers = new ArrayList<>();
-        for(SortedMap row: results) {
+        for(Map row: results) {
             Customer customer = new Customer();
             customer.setName(row.get("customer_name").toString());
             customer.setContact("8080808080","ex@ample.com");
             customers.add(customer);
         }
+        
         Response resp = new Response(customers);
         return resp;
-    }    
+    }
 }
