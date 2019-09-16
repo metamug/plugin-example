@@ -26,5 +26,6 @@ public class RequestExample implements RequestProcessable {
         customer.setContact("8080808080", "john@example.com");
 
         Response resp = new Response(customer);
-        return resp;}
+        return resp;
+    }
 }
