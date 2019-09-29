@@ -1,5 +1,12 @@
 ### Metamug Plugin Example
 
-Uses [Metamug Code API](https://github.com/metamug/mtg-api) as dependency.
+This is a sample plugin to get started. Metamug API Plugin must be a maven project and 
+must contain [Metamug API SDK](https://github.com/metamug/mtg-api) as a dependency.
 
-Check the docs [here](https://metamug.com/docs/plugins).
+This example contains
+* RequestProcessable
+* ResponseProcessable
+* ResultProcessable
+
+
+To know more about metamug api plugins, read the docs [here](https://metamug.com/docs/plugins).
