@@ -8,6 +8,6 @@ This example contains
 * ResponseProcessable
 * ResultProcessable
 
-[Metamug API Plugin Example](https://lh3.googleusercontent.com/-lPZIDA17RqM/XZCydv0wWyI/AAAAAAAAIhA/8-ayZtHdsFMf3zCSGhg0PUCBwgbt8InwwCK8BGAsYHg/s0/2019-09-29.png)
+![Metamug API Plugin Example](https://lh3.googleusercontent.com/-lPZIDA17RqM/XZCydv0wWyI/AAAAAAAAIhA/8-ayZtHdsFMf3zCSGhg0PUCBwgbt8InwwCK8BGAsYHg/s0/2019-09-29.png)
 
 To know more about metamug api plugins, read the docs [here](https://metamug.com/docs/plugins).
