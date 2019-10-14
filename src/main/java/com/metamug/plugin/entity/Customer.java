@@ -5,16 +5,19 @@
  */
 package com.metamug.plugin.entity;
 
-import com.metamug.entity.DTO;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
 /**
  *
  * @author deepak
  */
-public class Customer implements DTO {
+@XmlRootElement
+public class Customer {
     private int id;
     private String name;
+    @XmlElement(name = "contact")
     private Contact contact;
 
     public void setName(String n) {
